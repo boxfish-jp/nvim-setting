@@ -20,3 +20,4 @@ local function compare_to_clipboard()
 end
 
 vim.keymap.set("n", "<leader>bc", compare_to_clipboard, { desc = "Compare to clipboard" })
+vim.keymap.set("x", "p", "P", { desc = "Replace selected text with clipboard content" })
