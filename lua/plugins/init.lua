@@ -4,4 +4,5 @@ return {
   require("plugins.flutter"),
   require("plugins.format"),
   require("plugins.color-schema"),
+  require("plugins.cmp")
 }
