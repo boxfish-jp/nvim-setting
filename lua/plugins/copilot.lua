@@ -6,13 +6,16 @@ return {
     event = "InsertEnter",
     opts = {
       suggestion = {
-        enabled = true,
+        enabled = false,
         auto_trigger = true,
         keymap = {
           accept = false,
           next = "<M-]>",
           prev = "<M-[>",
         },
+      },
+      panel = {
+        enabled = false,
       },
       filetypes = {
         markdown = true,
@@ -21,3 +24,4 @@ return {
     },
   },
 }
+

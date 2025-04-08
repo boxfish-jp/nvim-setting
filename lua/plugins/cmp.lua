@@ -1,21 +1,25 @@
 return {
   {
-    'saghen/blink.cmp',
+    "giuxtaposition/blink-cmp-copilot",
+    enabled = false,
+  },
+  {
+    "saghen/blink.cmp",
+    dependencies = { "fang2hou/blink-copilot" },
     opts = {
-      -- ここに設定を書く
-      keymap = {
-        ['<tab>'] = {
-          "select_and_accept",
-          function(cmp)
-            if cmp.is_visible() then
-              cmp.accept()
-            elseif require("copilot.suggestion").is_visible() then
-              require("copilot.suggestion").accept()
-            end
-          end,
-          "fallback",
+      sources = {
+        providers = {
+          copilot = {
+            name = "copilot",
+            module = "blink-copilot",
+            score_offset = 0,
+            async = true,
+          },
         },
       },
-    }
+      keymap = {
+        preset = "super-tab"
+      }
+    },
   }
 }
