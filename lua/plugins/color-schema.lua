@@ -1,4 +1,5 @@
 return {
+  --[[
   {
     "catppuccin/nvim",
     name = "catppuccin",
@@ -115,11 +116,29 @@ return {
       },
     },
   },
+]] --
+  {
+    "scottmckendry/cyberdream.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      transparent = true,
+      highlights = {
+        -- Highlight groups to override, adding new groups is also possible
+        -- See `:h highlight-groups` for a list of highlight groups or run `:hi` to see all groups and their current values
+
+        -- Example:
+        LineNrAbove = { fg = "grey", bg = "NONE" },
+        LineNrBelow = { fg = "grey", bg = "NONE" },
+        CursorLineNr = { fg = "orange", bg = "NONE", italic = true }
+        -- More examples can be found in `lua/cyberdream/extensions/*.lua`
+      },
+    }
+  },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "cyberdream",
     },
   }
-
 }
